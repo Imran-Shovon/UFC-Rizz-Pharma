@@ -3,42 +3,43 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import BGArt from '../assets/bg_artwork.png';
+import jhonImage from "../assets/jhon.png";
 
 const testimonials = [
   {
-    quote: "Hims changed everything! My hair is fuller and healthier than ever.",
+    quote: "I've tried every home remedy and hair care treatment but ended uo with long waits and no results. Since I've started using His my hair has grown, thickened, and darkened tremendously.",
     rating: 5,
     name: "John Williams",
     title: "Lead Designer",
-    image: "/images/testimonial1.jpg",
+    image: jhonImage,
   },
   {
-    quote: "After using Hims, the difference in hair growth is amazing!",
+    quote: "I've tried every home remedy and hair care treatment but ended uo with long waits and no results. Since I've started using His my hair has grown, thickened, and darkened tremendously.",
     rating: 4,
     name: "Sophia Lee",
     title: "Marketing Manager",
-    image: "/images/testimonial2.jpg",
+    image: jhonImage,
   },
   {
-    quote: "I tried everything, but only Hims gave me real results.",
+    quote: "I've tried every home remedy and hair care treatment but ended uo with long waits and no results. Since I've started using His my hair has grown, thickened, and darkened tremendously.",
     rating: 5,
     name: "Michael Chen",
     title: "UX Engineer",
-    image: "/images/testimonial3.jpg",
+    image: jhonImage,
   },
   {
-    quote: "Hims helped me feel confident again!",
+    quote: "I've tried every home remedy and hair care treatment but ended uo with long waits and no results. Since I've started using His my hair has grown, thickened, and darkened tremendously.",
     rating: 5,
     name: "Emma Brown",
     title: "Product Manager",
-    image: "/images/testimonial4.jpg",
+    image: jhonImage,
   },
   {
-    quote: "Great service and great product. Highly recommended!",
+    quote: "I've tried every home remedy and hair care treatment but ended uo with long waits and no results. Since I've started using His my hair has grown, thickened, and darkened tremendously.",
     rating: 4,
     name: "Daniel Garcia",
     title: "Frontend Developer",
-    image: "/images/testimonial5.jpg",
+    image: jhonImage,
   },
 ];
 
@@ -64,13 +65,13 @@ const Testimonial = () => {
             0: { slidesPerView: 1 },
             768: { slidesPerView: 3 },
           }}
-          className="pb-20"
+          className="pb-20 mt-12"
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow h-[360px] flex flex-col justify-between">
-                <p className="text-base italic line-clamp-4 mb-4">
-                  &ldquo;{testimonial.quote}&rdquo;
+              <div className="bg-white/10 flex flex-col justify-center items-center backdrop-blur-md p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow h-[360px] ">
+                <p className="text-2xl mb-4">
+                  &ldquo; <br />{testimonial.quote};
                 </p>
                 <div className="flex items-center mb-2">
                   {[...Array(testimonial.rating)].map((_, i) => (

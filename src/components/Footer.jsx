@@ -1,6 +1,9 @@
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Branding from "../assets/Branding.png";
 import FooterImage from "../assets/Footer.png";
+import HMS from "../assets/HMS.png";
+import Mask from "../assets/Mask_group.png";
+import { IoIosSend } from "react-icons/io";
 
 const Footer = () => {
   return (
@@ -10,18 +13,16 @@ const Footer = () => {
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Left Section - Email Subscription */}
-        <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg">
-          <h3 className="text-2xl font-bold mb-4">Let's Stay In Touch</h3>
-          <p className="mb-4">Keep up to date with our latest news & special offers.</p>
-          <div className="flex">
+        <div className="flex flex-col items-center border backdrop-blur-md p-6 rounded-lg">
+          <h3 className="text-4xl text-center font-bold mb-4">Let's Stay In <br /> Touch</h3>
+          <p className="mb-4 text-center">Keep up to date with our latest news & <br /> special offers.</p>
+          <div className="relative">
             <input
               type="email"
               placeholder="enter your email"
-              className="w-full px-4 py-2 rounded-l-full bg-gray-800 text-white placeholder-gray-400 focus:outline-none"
+              className="w-full px-6 py-4 rounded outline text-white  "
             />
-            <button className="px-4 py-2 bg-yellow-400 text-black rounded-r-full hover:bg-yellow-300 transition">
-              →
-            </button>
+            <IoIosSend size={30}  className="absolute right-1 top-3"/>
           </div>
         </div>
 
@@ -52,22 +53,29 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section - HIPAA Logo, Social Icons, and Copyright */}
-      <div className="mt-8 text-center">
-        <div className="flex justify-center items-center gap-4 mb-4">
+      <div className="md:flex justify-around items-center mt-8 text-center">
+        <div className="gap-4 mb-4">
           <img
-            src="path/to/hipaa-logo.png"
+            src={Mask}
             alt="HIPAA Compliant"
-            className="h-10"
+            className="w-42"
           />
-          <div className="flex gap-2">
-            <FaFacebookF className="text-xl hover:text-yellow-400 cursor-pointer" />
-            <FaInstagram className="text-xl hover:text-yellow-400 cursor-pointer" />
-          </div>
         </div>
-        <p className="text-sm">
-          Copyright © 2024 Rizz Pharma All Right Reserved - Built by Business Web
-          Social
-        </p>
+
+        <div >
+          <div className="flex gap-2 mb-5">
+            <FaFacebookF size={30} className="text-xl hover:text-yellow-400 cursor-pointer" />
+            <FaInstagram size={30} className="text-xl hover:text-yellow-400 cursor-pointer" />
+          </div>
+          <div className="md:flex justify-start">
+            <img src={HMS} alt="" />
+            <p className="text-md">
+            Copyright © 2024 Rizz Pharma All Right Reserved - Built <br /> by Business Web
+            Social
+          </p>
+          </div>
+          
+        </div>
       </div>
       <div>
         <img src={Branding} alt="" />

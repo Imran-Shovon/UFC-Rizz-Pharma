@@ -36,7 +36,7 @@ const Category = () => {
           <input
             type="text"
             placeholder="Search by product/treatment"
-            className="w-full px-14 text-2xl py-6 rounded-full bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white pr-4"
+            className="w-full px-14 text-2xl py-6 rounded-full outline text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white pr-4"
           />
           <IoSearch
             size={25}

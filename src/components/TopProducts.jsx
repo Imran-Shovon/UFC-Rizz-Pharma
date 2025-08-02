@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useEffect, useState } from "react";
 import { FaHeadphones, FaLock, FaStar, FaTruck } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
@@ -10,16 +11,19 @@ const TopProducts = () => {
 
   // Fetch products
   useEffect(() => {
-    fetch("https://dummyjson.com/products?limit=12")
-      .then((res) => res.json())
-      .then((data) => {
-        const mapped = data.products.map((p) => ({
+    axios
+      .get("https://dummyjson.com/products?limit=12")
+      .then((response) => {
+        const mapped = response.data.products.map((p) => ({
           name: p.title,
           image: p.thumbnail,
           price: `$${p.price}`,
           available: p.stock > 0,
         }));
         setProducts(mapped);
+      })
+      .catch((error) => {
+        console.error("Failed to fetch products:", error);
       });
   }, []);
 
