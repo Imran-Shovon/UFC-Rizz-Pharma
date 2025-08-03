@@ -3,45 +3,10 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import BGArt from '../assets/bg_artwork.png';
-import jhonImage from "../assets/jhon.png";
+import testimonials from "../utils/testimonialsDetails";
+import './Testimonial.css';
 
-const testimonials = [
-  {
-    quote: "I've tried every home remedy and hair care treatment but ended uo with long waits and no results. Since I've started using His my hair has grown, thickened, and darkened tremendously.",
-    rating: 5,
-    name: "John Williams",
-    title: "Lead Designer",
-    image: jhonImage,
-  },
-  {
-    quote: "I've tried every home remedy and hair care treatment but ended uo with long waits and no results. Since I've started using His my hair has grown, thickened, and darkened tremendously.",
-    rating: 4,
-    name: "Sophia Lee",
-    title: "Marketing Manager",
-    image: jhonImage,
-  },
-  {
-    quote: "I've tried every home remedy and hair care treatment but ended uo with long waits and no results. Since I've started using His my hair has grown, thickened, and darkened tremendously.",
-    rating: 5,
-    name: "Michael Chen",
-    title: "UX Engineer",
-    image: jhonImage,
-  },
-  {
-    quote: "I've tried every home remedy and hair care treatment but ended uo with long waits and no results. Since I've started using His my hair has grown, thickened, and darkened tremendously.",
-    rating: 5,
-    name: "Emma Brown",
-    title: "Product Manager",
-    image: jhonImage,
-  },
-  {
-    quote: "I've tried every home remedy and hair care treatment but ended uo with long waits and no results. Since I've started using His my hair has grown, thickened, and darkened tremendously.",
-    rating: 4,
-    name: "Daniel Garcia",
-    title: "Frontend Developer",
-    image: jhonImage,
-  },
-];
+
 
 const Testimonial = () => {
   return (
@@ -69,7 +34,7 @@ const Testimonial = () => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white/10 flex flex-col justify-center items-center backdrop-blur-md p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow h-[360px] ">
+              <div className="bg-white/10 flex flex-col justify-center items-center backdrop-blur-md p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow h-[390px] ">
                 <p className="text-2xl mb-4">
                   &ldquo; <br />{testimonial.quote};
                 </p>
@@ -100,28 +65,6 @@ const Testimonial = () => {
         {/* Pagination Stepper */}
         <div className="swiper-pagination mt-6 flex justify-center" />
       </div>
-
-      {/* Pagination Bullet Styling */}
-      <style>{`
-        .swiper-pagination {
-          display: flex !important;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 8px;
-        }
-        .swiper-pagination-bullet {
-          background-color: white;
-          opacity: 0.5;
-          width: 10px;
-          height: 10px;
-          border-radius: 9999px;
-          transition: opacity 0.3s;
-        }
-        .swiper-pagination-bullet-active {
-          opacity: 1;
-          background-color: #facc15; /* amber-400 */
-        }
-      `}</style>
     </section>
   );
 };

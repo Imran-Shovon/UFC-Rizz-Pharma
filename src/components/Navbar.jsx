@@ -12,9 +12,6 @@ const Navbar = () => {
   return (
     <nav
       className="text-white font-sans w-full z-50"
-      // style={{
-      //   background: "linear-gradient(90deg, #1a1a2e, #4b0082)",
-      // }}
     >
       <div className="flex justify-between items-center px-6 md:px-24 py-4">
         {/* Logo */}
@@ -101,11 +98,6 @@ const Navbar = () => {
               <IoCartOutline size={50} className="text-white" />
             </li>
           </ul>
-          {/* <div className="flex gap-4 mt-4">
-            
-            
-            
-          </div> */}
         </div>
       )}
     </nav>
